@@ -1,0 +1,113 @@
+<!doctype html>
+<html>
+<head>
+    <title>Free Manga</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/image.css">
+</head>
+<body>
+<div class="container">
+
+  <header>
+
+		<h1 id="label">Manga</h1>
+
+		</header>
+
+		<section class="got">
+
+			<main>
+
+					<img src="image/1img.jpg" alt="carousel">
+
+			</main>
+
+				<section class="buttons">
+
+					<button id="previous" type="button" name="button">Back</button>
+
+					<button id="next" type="button" name="button">Next</button>
+
+					<script type="text/javascript"src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+					<script type="text/javascript" src="main.js"></script>
+
+				</section>
+
+				<audio id="play" autoplay>
+
+					<source controls="controls" src="audio/waterfall.mp3" type="audio/mpeg" loop="loop">
+						Your browser does not support the audio_file.
+				</audio>
+
+				<audio id="play2" autoplay>
+
+					<source controls="controls" src="audio/Fireplace.mp3" type="audio/mpeg" loop="loop">
+						Your browser does not support the audio_file.
+				</audio>
+
+				<audio id="play3" autoplay>
+
+					<source controls="controls" src="audio/nature.mp3" type="audio/mpeg" loop="loop">
+						Your browser does not support the audio_file.
+				</audio>
+
+				<audio id="effect" src="audio/leftbutton.mp3"></audio>
+
+				<audio id="effect2" src="audio/rightbutton.mp3"></audio>
+
+		</section>
+
+    <div class="jumbotron text-center">
+        <h1>LOGIN: </h1>
+        <!-- <img src="img/dolphinss.gif" alt="dolphin gif"> -->
+
+        <!-- <p>Login or Signup:</p> -->
+
+        <a href="/index" class="btn btn-default"><span><i class="fab fa-d-and-d"></i></span>Admin</a>
+
+    </div>
+
+    <footer>
+
+      <a href="#"> [ Back To The Top ] </a>
+
+    </footer>
+
+    <div class="col-sm-6">
+      <h3>Comments</h3>
+        <h2>Add a comment: </h2>
+        <form action="/comment" method="POST">
+          <input type="text" name="name" placeholder="name">
+          <input type="text" placeholder="comment" name="comment">
+          <button type="submit">Submit</button>
+        </form>
+
+
+      <ul class="messages">
+      <% for(var i=0; i<comment.length; i++) {%>
+        <li class="message">
+          <span><%= comment[i].name %></span>
+          <span><%= comment[i].comment %></span>
+          <span id="date"></span>
+          <span><%= comment[i].thumbUp %></span>
+          <span><%= comment[i].thumbDown %></span>
+          <span><i class="fa fa-thumbs-up" aria-hidden="true"></i></span>
+          <span><i class="fa fa-thumbs-down" aria-hidden="true"></i></span>
+          <!-- <span><i class="fas fa-trash"></i></span> -->
+        </li>
+      <% } %>
+      </ul>
+    </div>
+
+
+
+</div>
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script type="text/javascript" src="main.js"></script>
+<script type="text/javascript"src="manga.js"></script>
+</body>
+</html>

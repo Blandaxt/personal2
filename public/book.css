@@ -1,0 +1,9 @@
+*{
+  box-sizing: border-box;
+}
+.fa-d-and-d{
+  color:red;
+  margin-right: 5px;
+  transform: scale(.8);
+  border: white 1px solid;
+}
